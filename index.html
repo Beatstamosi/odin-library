@@ -10,24 +10,41 @@
 <body>
     <div class="header">
         <h1>MY LIBRARY</h1>
-        <button>Add Book</button>
+        <button id="add-book">Add Book</button>
     </div>
     <hr>
     <div class="container-books">
-        <div class="book-card">
-            <img src="https://m.media-amazon.com/images/I/51wt4ZP8F8L._AC_UF1000,1000_QL80_.jpg" alt="">
-            <h2>Der Schwarm</h2>
-            <p>Author: Frank Schätzing</p>
-            <p class="pages">Pages: 569</p>
-            <button class="read">Read</button>
-        </div>
-        <div class="book-card">
-            <img src="https://m.media-amazon.com/images/I/51wt4ZP8F8L._AC_UF1000,1000_QL80_.jpg" alt="">
-            <h2>Der Schwarm</h2>
-            <p>Author: Frank Schätzing</p>
-            <p class="pages">Pages: 569</p>
-            <button class="read">Read</button>
-        </div>
     </div>
+
+    <dialog class="background-dialog">
+        <div class="dialog-content">
+            <form action="/" method="dialog">
+                <div>
+                    <label for="title">Enter Title: <span aria-label="required">*</span></label>
+                    <input type="text" name="title" id="book-title" required>
+                </div>
+                <div>
+                    <label for="author">Enter Author: <span aria-label="required">*</span></label>
+                    <input type="text" name="author" id="book-author" required>
+                </div>
+                <div>
+                    <label for="pages">Enter Number of Pages: <span aria-label="required">*</span></label>
+                    <input type="number" name="pages" id="book-pages" required>
+                </div>
+                <div>
+                    <label for="image">Enter Image URL: <span aria-label="required">*</span></label>
+                    <input type="url" name="image" id="book-image" required>
+                </div>
+                <div>
+                    <input type="checkbox" name="read">
+                    <label for="read">I have already read the Book.</label>
+                </div>
+                <div>
+                    <button type="submit" id="submit-book-entry">Add Book</button>
+                    <button id="close-dialog">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
 </body>
 </html>

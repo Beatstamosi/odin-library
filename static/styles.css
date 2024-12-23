@@ -55,7 +55,8 @@ hr {
 
 .book-card {
     width: 200px;
-    height: 400px;
+    height: 450px;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -89,4 +90,99 @@ hr {
 .pages {
     font-style: italic;
     font-size: 15px;
+}
+
+.delete-book {
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+.delete-book:hover {
+    background-color: rgba(255, 0, 0, 1);
+    cursor: pointer;
+}
+
+.background-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(246, 191, 108, 0.7);
+    backdrop-filter: blur(10px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.dialog-content {
+    width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f6bf6c;
+    color: #002907;
+    font-size: 18px;
+    border: 3px solid #002907;
+    z-index: 1000;
+}
+
+form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form > div:nth-child(-n+4) {
+    display: flex;
+    flex-direction: column;
+}
+
+form div:last-child {
+    display: flex;
+    gap: 20px;
+}
+
+input {
+    padding: 5px;
+    font-size: 18px;
+}
+
+input[type="number"] {
+    width: 20%;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+form button {
+    font-size: 15px;
+    padding: 10px 30px;
+    font-weight: 800;
+    color: #f6bf6c;
+    border: none;
+}
+
+form button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+form button[type="submit"] {
+    background-color: #026012;
+}
+
+#close-dialog {
+    background-color: #810000;
 }
