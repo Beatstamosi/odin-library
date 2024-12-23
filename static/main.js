@@ -1,6 +1,6 @@
 // set up functionality
-const myLibrary = [{title: "Der Schwarm", author: "Frank Schätzing", pages: "1008", read: "read", image: "https://m.media-amazon.com/images/I/51wt4ZP8F8L._AC_UF1000,1000_QL80_.jpg"},
-                    {title: "The Contortionists Handbook", author: "Craig Clavenger", pages: "199", read: "unread", image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387727400i/527823.jpg"},
+const myLibrary = [ new Book("Der Schwarm", "Frank Schätzing", 1008, "read", "https://m.media-amazon.com/images/I/51wt4ZP8F8L._AC_UF1000,1000_QL80_.jpg" ),
+                    new Book("The Contortionists Handbook", "Craig Clavenger", 199, "unread", "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387727400i/527823.jpg"),
  ];
 const containerBooks = document.querySelector(".container-books");
 
@@ -32,10 +32,6 @@ function Book (title, author, pages, read, image) {
     this.pages = pages;
     this.read = read;
     this.image = image;
-    this.info = () => {
-        console.log(`${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`);
-        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
-    }
 }
 
 
