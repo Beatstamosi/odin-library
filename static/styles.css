@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px 100px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f6bf6c;
+    color: #002907;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 30px;
+    color: #002907;
+    font-weight: bold;
+}
+
+hr {
+    border: 1px solid #810000;
+    margin-bottom: 40px;
+}
+
+.header button {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    background-color: #002907;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f6bf6c;
+}
+
+.header button:hover {
+    cursor: pointer;
+    background-color: #026012;
+    transform: scale(1.05);
+}
+
+.container-books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.book-card {
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.book-card button {
+    cursor: pointer;
+    color: #f6bf6c;
+    border: none;
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.read {
+    background-color: #026012;
+}
+
+.unread {
+    background-color: #810000;
+}
+
+.book-card h2 {
+    font-size: 1.5em;
+}
+
+.book-card img {
+    width: 200px;
+}
+
+.pages {
+    font-style: italic;
+    font-size: 15px;
+}
