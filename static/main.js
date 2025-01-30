@@ -17,6 +17,30 @@ cancelInput.addEventListener("click", () => {
     dialogueBox.style.display = "none";
 })
 
+// input check for title
+const titleInput = document.querySelector("input[name='title']");
+titleInput.addEventListener("input", () => {
+    checkInputError(titleInput);
+}) 
+    
+// input check for author
+const authorInput = document.querySelector("input[name='author']");
+authorInput.addEventListener("input", () => {
+    checkInputError(authorInput);
+})
+
+// input check for pages
+const pagesInput = document.querySelector("input[name='pages']");
+pagesInput.addEventListener("input", () => {
+    checkInputError(pagesInput);
+})
+
+// input check for url
+const imageInput = document.querySelector("input[name='image']");
+imageInput.addEventListener("input", () => {
+    checkInputError(imageInput);
+})
+
 // add book to library
 const submitBookButton = document.querySelector("#submit-book-entry");
 submitBookButton.addEventListener("click", (event) => {
@@ -108,6 +132,43 @@ function displayLibrary () {
 }
 
 
+function checkInputError(input) {
+    const submitBookButton = document.querySelector("#submit-book-entry");
+
+    if (input.validity.valueMissing) {
+        input.setCustomValidity("Field is required.");
+        disableSubmitButton();
+    } else if (input.validity.typeMismatch) {
+        input.setCustomValidity("Input must be a valid url.");
+        disableSubmitButton();
+    } else {
+        input.setCustomValidity("");
+        enableSubmitButton();
+    }
+
+    input.reportValidity();
+}
+
+function turnOffSubmitButtonOnLoad() {
+    if (titleInput.validity.valueMissing || authorInput.validity.valueMissing || pagesInput.validity.valueMissing || imageInput.validity.valueMissing) {
+        disableSubmitButton();
+    } else {
+        enableSubmitButton();
+    }
+}
+
+
+function enableSubmitButton() {
+    submitBookButton.disabled = false;
+    submitBookButton.style.backgroundColor = "#026012";
+}
+
+function disableSubmitButton() {
+    submitBookButton.disabled = true;
+    submitBookButton.style.backgroundColor = "lightgrey";
+}
+
 
 // display library on page load
 displayLibrary();
+turnOffSubmitButtonOnLoad();
