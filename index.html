@@ -1,50 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Library</title>
-    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/styles.css" />
     <script src="static/main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <h1>MY LIBRARY</h1>
-        <button id="add-book">Add Book</button>
+      <h1>MY LIBRARY</h1>
+      <button id="add-book">Add Book</button>
     </div>
-    <hr>
-    <div class="container-books">
-    </div>
+    <hr />
+    <div class="container-books"></div>
 
     <dialog class="background-dialog">
-        <div class="dialog-content">
-            <form action="/" method="dialog">
-                <div>
-                    <label for="title">Enter Title: <span aria-label="required">*</span></label>
-                    <input type="text" name="title" id="book-title" required>
-                </div>
-                <div>
-                    <label for="author">Enter Author: <span aria-label="required">*</span></label>
-                    <input type="text" name="author" id="book-author" required>
-                </div>
-                <div>
-                    <label for="pages">Enter Number of Pages: <span aria-label="required">*</span></label>
-                    <input type="number" name="pages" id="book-pages" required>
-                </div>
-                <div>
-                    <label for="image">Enter Image URL: <span aria-label="required">*</span></label>
-                    <input type="url" name="image" id="book-image" required>
-                </div>
-                <div>
-                    <input type="checkbox" name="read">
-                    <label for="read">I have already read the Book.</label>
-                </div>
-                <div>
-                    <button type="submit" id="submit-book-entry">Add Book</button>
-                    <button id="close-dialog">Cancel</button>
-                </div>
-            </form>
-        </div>
+      <div class="dialog-content">
+        <form action="/" method="dialog">
+          <div>
+            <label for="title"
+              >Enter Title: <span aria-label="required">*</span></label
+            >
+            <input type="text" name="title" id="book-title" required />
+          </div>
+          <div>
+            <label for="author"
+              >Enter Author: <span aria-label="required">*</span></label
+            >
+            <input type="text" name="author" id="book-author" required />
+          </div>
+          <div>
+            <label for="pages"
+              >Enter Number of Pages:
+              <span aria-label="required">*</span></label
+            >
+            <input type="number" name="pages" id="book-pages" required />
+          </div>
+          <div>
+            <label for="image"
+              >Enter Image URL: <span aria-label="required">*</span></label
+            >
+            <input type="url" name="image" id="book-image" required />
+          </div>
+          <div>
+            <input type="checkbox" name="read" />
+            <label for="read">I have already read the Book.</label>
+          </div>
+          <div>
+            <button type="submit" id="submit-book-entry">Add Book</button>
+            <button id="close-dialog">Cancel</button>
+          </div>
+        </form>
+      </div>
     </dialog>
-</body>
+  </body>
 </html>
